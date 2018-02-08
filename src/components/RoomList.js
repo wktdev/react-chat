@@ -22,18 +22,20 @@ class RoomList extends Component {
   }
 
   render(){
-  	var result = this.state.rooms.map(function(val,index){
-           return <li key={index}>{val.name}</li>
-  	})
 
-  	console.log(result);
+
+
 
 
   	return(
      <div>
         <ul>
 
-           {result}
+           {
+             this.state.rooms.map(function(val,index){
+               return <li key={index}>{val.name}</li>
+  	         })
+           }
            
         </ul>
      </div>
