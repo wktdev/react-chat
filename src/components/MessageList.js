@@ -9,10 +9,12 @@ class MessageList extends Component {
 		this.state = {
 
 		}
+
 	}
 
 	render(){
-		return <div> <b> {this.props.activeRoom} </b></div>
+		console.log(this.messagesRef);
+		return <div> <b> Active room key: {this.props.activeRoom} </b></div>
 	}
 }
 
