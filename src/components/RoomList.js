@@ -32,20 +32,22 @@ class RoomList extends Component {
   }
 
   render(){
-
+    
   	return(
      <div>
         <ul>
 
           <form onSubmit={this.createRoom}>
-            <input type='text' ref={(value)=> this.newRoom = value}/>
+            <input type='text' ref={(value)=> this.newRoom = value} onChange={ (event) => this.setState({name: event.target.value})}/>
             <input type='submit'/>
           </form>
 
+          <div>{this.state.name}</div>
+
            {
-             this.state.rooms.map(function(val,index){
-               return <li key={index}>{val.name}</li>
-  	         })
+             this.state.rooms.map((val,index)=>{
+               return <li key={index} onClick={ () => this.props.setRoom(val.key) }>{val.name}</li>   
+             })  
            }
            
         </ul>
