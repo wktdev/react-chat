@@ -46,10 +46,8 @@ class App extends Component {
     return (
       <div className="App">
         <User firebase={firebase} setUser={this.setUser} user={this.state.user}/>
-         
          <RoomList firebase={firebase} setRoom={this.setRoom} />
          <MessageList firebase={firebase} activeRoom={this.state.activeRoom}/>
-
       </div>
     );
   }
