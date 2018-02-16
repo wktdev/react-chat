@@ -51,6 +51,7 @@ class MessageList extends Component {
 
         return (
             <div>
+            <h2>MESSAGES</h2>
               <ul>
               {result}
               </ul>

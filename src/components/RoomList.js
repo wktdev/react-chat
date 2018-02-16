@@ -35,6 +35,7 @@ class RoomList extends Component {
     
   	return(
      <div>
+        <h2>ROOM</h2>
         <ul>
 
           <form onSubmit={this.createRoom}>
